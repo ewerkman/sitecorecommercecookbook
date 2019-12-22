@@ -6,3 +6,25 @@ Add styles or override variables from the theme here.
 
 $primary: #eb3406;
 $secondary: #e6b5ad;
+
+@import url('https://fonts.googleapis.com/css?family=Salsa&display=swap');
+
+.navbar-brand {
+    .navbar-logo {
+        padding-top: 0px;
+        position: relative;
+    }
+    
+    span {
+        margin-top: 12px;
+        font-family: 'Salsa', cursive;
+        text-transform: none !important;
+        font-size: 28px;
+    }
+}
+
+.td-content {
+    h1, h3 {
+        color: $primary;
+    }
+}
