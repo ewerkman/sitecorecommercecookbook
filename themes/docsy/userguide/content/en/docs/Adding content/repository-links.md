@@ -25,7 +25,7 @@ There are three variables you can configure in `config.toml` to set up links:
 The URL for your site's source repository. This is used to generate the **Edit this page** and **Create documentation issue** links.
 
 ```toml
-github_repo = "https://github.com/google/docsy"
+github_repo = "https://github.com/ewerkman/sitecorecommercecookbook"
 ```
 
 ### `github_subdir` (optional)
@@ -41,7 +41,7 @@ github_subdir = "userguide"
 Specify a value here if you have a separate project repo and you'd like your users to be able to create issues against your project from the relevant docs. The **Create project issue** link appears only if this is set.
 
 ```toml
-github_project_repo = "https://github.com/google/docsy"
+github_project_repo = "https://github.com/ewerkman/sitecorecommercecookbook"
 ```
 
 

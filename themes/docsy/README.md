@@ -22,14 +22,14 @@ The following are basic prerequisites for using Docsy in your site:
 
 ## Example and usage
 
-You can find an example project that uses Docsy in the [Docsy Example Project repo](https://github.com/google/docsy-example). The Docsy Example Project is hosted at [https://example.docsy.dev/](https://example.docsy.dev/).
+You can find an example project that uses Docsy in the [Docsy Example Project repo](https://github.com/ewerkman/sitecorecommercecookbook). The Docsy Example Project is hosted at [https://example.docsy.dev/](https://example.docsy.dev/).
 
 To use the Docsy theme for your own site:
 
-  - (Recommended) Copy the [example project](https://github.com/google/docsy-example),
+  - (Recommended) Copy the [example project](https://github.com/ewerkman/sitecorecommercecookbook),
 ￼	   which includes the Docsy theme as a submodule.
     You can customize this pre-configured basic site into your own Docsy themed site. 
-    [Learn more...](https://github.com/google/docsy-example)
+    [Learn more...](https://github.com/ewerkman/sitecorecommercecookbook)
   
   - Add Docsy to your existing Hugo site repo's `themes` directory. You can either add Docsy as a Git submodule, or 
     clone the Docsy theme into your project.

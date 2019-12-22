@@ -20,7 +20,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
 # Highlighting config
 pygmentsCodeFences = true
-pygmentsUseClasses = false
+pygmentsUseClasses = true
 # Use the new Chroma Go highlighter in Hugo.
 pygmentsUseClassic = false
 #pygmentsOptions = "linenos=table"
@@ -78,9 +78,9 @@ privacy_policy = ""
 version_menu = "Releases"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/google/docsy-example"
+github_repo = "https://github.com/ewerkman/sitecorecommercecookbook"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/google/docsy"
+github_project_repo = "https://github.com/ewerkman/sitecorecommercecookbook"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
@@ -137,7 +137,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "GitHub"
-	url = "https://github.com/google/docsy"
+	url = "https://github.com/ewerkman/sitecorecommercecookbook"
 	icon = "fab fa-github"
         desc = "Development takes place here!"
 [[params.links.developer]]

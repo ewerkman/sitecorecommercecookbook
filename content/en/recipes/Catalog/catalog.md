@@ -10,6 +10,12 @@ description: >
 
 Create a new catalog by executing the following command:
 
-```
+{{< highlight csharp >}}
+
     var catalog = this.Command<CreateCatalogCommand>();
-```
+
+{{< / highlight >}}
+
+### Associating a catalog with a price book
+
+### Deleting a catalog
