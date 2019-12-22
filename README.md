@@ -1,53 +1,25 @@
-# Docsy Example
+# Sitecore Commerce Cookbook
+
+Sitecore Commerce Cookbook contains recipes and menus to use with Sitecore Commerce.
+
+Just like a real cookbook, there are basic recipes that teach you how to do simple things (like how to boil an egg) and more difficult recipes (how to make a souffle).
+
+Once you have mastered the recipes, you can start combining the recipes into menus to create more advanced features.
+
+## About Hugo
+
+The Sitecore Commerce Cookbook uses [Hugo](https://gohugo.io/). Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again.
+Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content. Since websites are viewed far more often than they are edited, Hugo is designed to provide an optimal viewing experience for your website's end users and an ideal writing experience for website authors.
+
+## About Docsy
+
+The Sitecore Commerce Cookbook uses the Docsy theme.
 
 [Docsy](https://github.com/google/docsy) is a Hugo theme for technical documentation sites, providing easy site navigation, structure, and more. This **Docsy Example Project** uses the Docsy theme, as well as providing a skeleton documentation structure for you to use. You can either copy this project and edit it with your own content, or use the theme in your projects like any other [Hugo theme](https://gohugo.io/themes/installing-and-using-themes/).
-
-This Docsy Example Project is hosted at [https://example.docsy.dev/](https://example.docsy.dev/).
 
 You can find detailed theme instructions in the Docsy user guide: https://docsy.dev/docs/
 
 This is not an officially supported Google product. This project is currently maintained.
-
-## Cloning the Docsy Example Project
-
-The following will give you a project that is set up and ready to use (don't forget to use `--recurse-submodules` or you won't pull down some of the code you need to generate a working site). The `hugo server` command builds and serves the site. If you just want to build the site, run `hugo` instead.
-
-```bash
-git clone --recurse-submodules --depth 1 https://github.com/ewerkman/sitecorecommercecookbook.git
-cd docsy-example
-hugo server
-```
-
-The theme is included as a Git submodule:
-
-```bash
-▶ git submodule
- a053131a4ebf6a59e4e8834a42368e248d98c01d themes/docsy (heads/master)
-```
-
-If you want to do SCSS edits and want to publish these, you need to install `PostCSS` (not needed for `hugo server`):
-
-```bash
-npm install
-```
-
-<!--### Cloning the Example from the Theme Project
-
-
-```bash
-git clone --recurse-submodules --depth 1 https://github.com/docsy.git
-cd tech-doc-hugo-theme/exampleSite
-HUGO_THEMESDIR="../.." hugo server
-```
-
-
-Note that the Hugo Theme Site requires the `exampleSite` to live in a subfolder of the theme itself. To avoid recursive duplication, the example site is added as a Git subtree:
-
-```bash
-git subtree add --prefix exampleSite https://github.com/google/docsy.git  master --squash
-```
-
-To pull in changes, see `pull-deps.sh` script in the theme.-->
 
 ## Running the website locally
 
