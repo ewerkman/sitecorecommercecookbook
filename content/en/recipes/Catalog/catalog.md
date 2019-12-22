@@ -1,7 +1,7 @@
 ---
 title: "Catalog"
 linkTitle: "Catalog"
-weight: 4
+weight: 10
 description: >
   Working with catalogs.
 ---

@@ -1,5 +1,5 @@
 ---
 title: "Inventory"
 linkTitle: "Inventory"
-weight: 4
+weight: 30
 ---

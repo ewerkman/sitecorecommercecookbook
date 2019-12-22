@@ -9,7 +9,7 @@ menu:
     weight: 20
 ---
 
-Menus are combinations of recipes which together form some functionality. For instance, a catalog import would be a menu consisting of recipes for:
+Menus are combinations of recipes which together form some functionality. For instance, a catalog import would be a menu where you would use the recipes for:
 
 * creating the catalog;
 * creating a root category;
