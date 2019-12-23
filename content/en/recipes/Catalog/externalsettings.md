@@ -5,3 +5,5 @@ weight: 100
 description: >
   Working with the `ExternalSettingsComponent`
 ---
+
+### Creating a sitecore id
