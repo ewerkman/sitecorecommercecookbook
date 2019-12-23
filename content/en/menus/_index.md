@@ -9,6 +9,10 @@ menu:
     weight: 20
 ---
 
+{{% alert title="Tip" color="info" %}}
+This is a warning.
+{{% /alert %}}
+
 Menus are combinations of recipes which together form some functionality. For instance, a catalog import would be a menu where you would use the recipes for:
 
 * creating the catalog;

@@ -7,23 +7,26 @@ Add styles or override variables from the theme here.
 $primary: #eb3406;
 $secondary: #e6b5ad;
 
-@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
-
-.navbar-brand {
-    .navbar-logo {
-        padding-top: 0px;
-        position: relative;
-    }
-    
-    span {
-        font-family: 'Patua One', cursive;
-        text-transform: none !important;
-        font-size: 28px;
-    }
-}
+@import url("https://fonts.googleapis.com/css?family=Patua+One&display=swap");
 
 .td-content {
-    h1, h3 {
-        color: $primary;
+  h1,
+  h3 {
+    color: $primary;
+  }
+}
+
+.td-navbar {
+  .navbar-brand {
+    .navbar-logo {
+      padding-top: 0px;
+      position: relative;
     }
+
+    span {
+      font-family: "Patua One", cursive;
+      text-transform: none !important;
+      font-size: 28px;
+    }
+  }
 }
