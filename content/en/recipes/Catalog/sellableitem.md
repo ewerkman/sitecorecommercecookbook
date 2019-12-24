@@ -4,6 +4,9 @@ linkTitle: "Sellable Items"
 weight: 30
 description: >
   Working with sellable items in a catalog.
+tags:
+  - catalog
+  - sellable item  
 ---
 
 ### Creating a sellable item
@@ -65,3 +68,104 @@ listPricingPolicy.AddPrice(new Money("GBP", 8.99M));
 listPricingPolicy.AddPrice(new Money("CAD", 13.99M));
 
 {{< /highlight >}}
+
+### Setting display properties on a sellable item
+
+{{< highlight csharp >}}
+
+var displayProperties = sellableItem.GetComponent<DisplayPropertiesComponent>();
+displayProperties.DisambiguatingDescription = "This is the description of my first product";
+displayProperties.Color = "Black";
+displayProperties.Size = "Large";
+displayProperties.Style = "Modern";
+displayProperties.DisplayOnSite = true;
+
+{{< /highlight >}}
+
+### Adding variants to a sellable item
+
+{{< highlight csharp >}}
+
+sellableItem = await this.Command<CreateSellableItemVariationCommand>()
+  .Process(commerceContext, sellableItem.Id, "GreenSampleProduct", 
+    "GreenSampleProduct", "Green Sample Product");
+sellableItem = await this.Command<CreateSellableItemVariationCommand>()
+  .Process(commerceContext, sellableItem.Id, "BlueSampleProduct", 
+    "BlueSampleProduct", "Blue Sample Product");
+
+var greenVariation = sellableItem.GetVariation("GreenSampleProduct");
+var greenDisplayProperties = greenVariation.GetComponent<DisplayPropertiesComponent>();
+greenDisplayProperties.Color = "Green";
+
+var blueVariation = sellableItem.GetVariation("BlueSampleProduct");
+var blueDisplayProperties = blueVariation.GetComponent<DisplayPropertiesComponent>();
+blueDisplayProperties.Color = "Blue";
+
+{{< /highlight >}}
+
+### Localizing display properties on a sellable item
+
+The following code adds localization 
+
+{{< highlight csharp >}}
+
+// getting localization entity for your sellable item. It will automatically 
+// create new if there is no existing one.
+var localizationEntity = await this.Command<LocalizeEntityPropertyCommand>()
+        .GetLocalizationEntity(commerceContext, sellableItem);
+
+// preparing translations
+var displayNameLocalizations = new List<Parameter> {
+    new Parameter{ Key = "en", Value = "My first product" },
+    new Parameter{ Key = "de-DE", Value = "Mein erstes Produkt" }
+};
+
+// Adding localizations for DisplayName property
+localizationEntity.AddOrUpdatePropertyValue("DisplayName", displayNameLocalizations);
+
+// preparing translations
+var colourLocalizations = new List<Parameter> {
+    new Parameter { Key = "en", Value = "Black"},
+    new Parameter { Key = "de-DE", Value = "Schwarz"}
+};
+
+// Adding localizations for Color property on DisplayPropertiesComponent
+localizationEntity.AddOrUpdateComponentValue("DisplayPropertiesComponent", 
+          displayProperties.Id, "Color", colourLocalizations);
+
+// Save localization entity 
+await Commander.PersistEntity(commerceContext, localizationEntity);
+
+{{< /highlight >}}
+
+### Adding localization for variants
+
+The following code adds localization for the `DisplayName` property on the ItemVariationComponent. Note that you need to have a Localization entity first.
+
+{{< highlight csharp >}}
+
+// Retrieve or create a LocalizationEntity for the sellableItem
+var localizationEntity = await this.Command<LocalizeEntityPropertyCommand>()
+        .GetLocalizationEntity(commerceContext, sellableItem);
+
+// Add localization for displayname on variants
+var greenVariationLocalizations = new List<Parameter> {
+    new Parameter { Key = "en", Value = "Green Sample Product" },
+    new Parameter { Key = "de-DE", Value = "Grünes Musterprodukt" }
+};
+
+localizationEntity.AddOrUpdateComponentValue("ItemVariationsComponent.ItemVariationComponent", 
+    "GreenSampleProduct", "DisplayName", greenVariationLocalizations);
+
+var blueVariationLocalizations = new List<Parameter> {
+    new Parameter { Key = "en", Value = "Blue Sample Product" },
+    new Parameter { Key = "de-DE", Value = "Blaues Musterprodukt" }
+};
+
+localizationEntity.AddOrUpdateComponentValue("ItemVariationsComponent.ItemVariationComponent", 
+    "BlueSampleProduct", "DisplayName", greenVariationLocalizations);
+
+// Save localization entity 
+await Commander.PersistEntity(commerceContext, localizationEntity);
+
+{{< /highlight >}}                

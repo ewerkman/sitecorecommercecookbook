@@ -4,6 +4,9 @@ linkTitle: "Category"
 weight: 20
 description: >
   Working with categories in a catalog.
+tags:
+  - catalog
+  - category
 ---
 
 ### Creating a root category
