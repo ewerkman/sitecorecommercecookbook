@@ -14,7 +14,8 @@ Create a new catalog by executing the following command:
 
 {{< highlight csharp >}}
 
-     var catalog = await this.Commander.Command<CreateCatalogCommand>().Process(commerceContext, "SampleCatalog", "Sample Catalog");
+     var catalog = await this.Commander.Command<CreateCatalogCommand>()
+                    .Process(commerceContext, "SampleCatalog", "Sample Catalog");
 
 {{< / highlight >}}
 
@@ -24,7 +25,8 @@ Retrieve a catalog by executing the following command:
 
 {{< highlight csharp >}}
 
-     var catalog = await this.Command<GetCatalogCommand>().Process(commerceContext, "SampleCatalog");
+     var catalog = await this.Command<GetCatalogCommand>()
+                    .Process(commerceContext, "SampleCatalog");
 
 {{< / highlight >}}
 
