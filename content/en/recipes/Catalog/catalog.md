@@ -14,7 +14,7 @@ Create a new catalog by executing the following command:
 
 {{< highlight csharp >}}
 
-    var catalog = this.Command<CreateCatalogCommand>();
+     var catalog = await this.Commander.Command<CreateCatalogCommand>().Process(commerceContext, "SampleCatalog", "Sample Catalog");
 
 {{< / highlight >}}
 
