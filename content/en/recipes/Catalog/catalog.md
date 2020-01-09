@@ -18,6 +18,16 @@ Create a new catalog by executing the following command:
 
 {{< / highlight >}}
 
+### Retrieving a catalog
+
+Retrieve a catalog by executing the following command:
+
+{{< highlight csharp >}}
+
+     var catalog = await this.Command<GetCatalogCommand>().Process(commerceContext, "SampleCatalog");
+
+{{< / highlight >}}
+
 ### Associating a catalog with a price book
 
 
